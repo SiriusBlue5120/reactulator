@@ -1,0 +1,178 @@
+$primary-color: #f2f2f2;
+$secondary-color: #cfcfcf;
+$tertiary-color: #0088cc;
+$quaternary-color: #ff932d;
+$background-color: #3b3b3b;
+$text-primary-color: #f3f3f3;
+$text-secondary-color: #2d2d2d;
+$text-tertiary-color: #b2b2b2;
+
+$border-radius: 1em;
+$btn-diameter: 2.25em;
+$btn-gap: 0.25em;
+$app-width: 12.5em;
+
+$ease-out-dur: 0.25s;
+$ease-in-dur: 0.2s;
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.App {
+    background-color: $background-color;
+    color: $text-primary-color;
+    height: 100vh;
+    width: 100vw;
+
+    .header {
+        color: $text-primary-color;
+        text-align: center;
+        padding: 2em 0;
+
+        h1 {
+            margin: 0 0;
+        }
+    }
+
+    .container {    
+        width: $app-width;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0em;
+        margin-bottom: 1em;
+        font-size: 2em;
+
+        >.result {
+            display: flex;
+            background-color: $secondary-color;
+            color: $text-secondary-color;
+            border-radius: $border-radius;
+            height: 2em;
+                
+            margin-bottom: 0.75em;
+            padding-right: 0.45em;
+            align-items : center;
+            justify-content : right;
+        }
+
+        .textbox {
+            display: flex;
+            border: none;
+            background-color: $primary-color;
+            color: $text-secondary-color;
+            border-radius: $border-radius;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            height: 2em;
+            width: $app-width;
+            text-align: end;
+            font-size: 1em;
+
+            transform: scale(100%);
+            transition-duration: $ease-in-dur;
+        }
+        .textbox:hover {
+            transform: scale(102%);
+            transition-duration: $ease-out-dur;
+        }
+
+        .key-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "num7 num8 num9 plus"
+                                 "num4 num5 num6 minus"
+                                 "num1 num2 num3 mult"
+                                 "num0 input result divide";
+            
+            .btn {
+                width: $btn-diameter;
+                height: $btn-diameter;
+                margin: $btn-gap auto;
+
+                font-size: 1em;
+                color: $text-secondary-color;
+
+                border: none;
+                border-radius: $btn-diameter;
+
+                transform: scale(100%);
+                transition-duration: $ease-in-dur;
+            }
+            .btn:hover {
+                transform: scale(105%);
+                transition-duration: $ease-out-dur;
+            }
+
+            .number {
+                background-color: $secondary-color;
+            }
+
+            .operator {
+                background-color: $tertiary-color;
+            }
+                    
+            .reset {
+                background-color: $quaternary-color;
+            }
+
+            .num0 {
+                grid-area: num0;
+            }
+            .num1 {
+                grid-area: num1;
+            }
+            .num2 {
+                grid-area: num2;
+            }
+            .num3 {
+                grid-area: num3;
+            }
+            .num4 {
+                grid-area: num4;
+            }
+            .num5 {
+                grid-area: num5;
+            }
+            .num6 {
+                grid-area: num6;
+            }
+            .num7 {
+                grid-area: num7;
+            }
+            .num8 {
+                grid-area: num8;
+            }
+            .num9 {
+                grid-area: num9;
+            }
+
+            .plus {
+                grid-area: plus;
+            }
+            .minus {
+                grid-area: minus;
+            }
+            .times {
+                grid-area: mult;
+            }
+            .divide {
+                grid-area: divide;
+            }
+
+            .input {
+                grid-area: input;
+            }
+            .result {
+                grid-area: result;
+            }
+        }
+    }
+
+    .signature {
+        color: $text-tertiary-color;
+        margin: 1em auto;
+        text-align: center;
+    }
+}

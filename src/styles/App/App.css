@@ -1,0 +1,139 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.App {
+  background-color: #3b3b3b;
+  color: #f3f3f3;
+  height: 100vh;
+  width: 100vw;
+}
+.App .header {
+  color: #f3f3f3;
+  text-align: center;
+  padding: 2em 0;
+}
+.App .header h1 {
+  margin: 0 0;
+}
+.App .container {
+  width: 12.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0em;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+.App .container > .result {
+  display: flex;
+  background-color: #cfcfcf;
+  color: #2d2d2d;
+  border-radius: 1em;
+  height: 2em;
+  margin-bottom: 0.75em;
+  padding-right: 0.45em;
+  align-items: center;
+  justify-content: right;
+}
+.App .container .textbox {
+  display: flex;
+  border: none;
+  background-color: #f2f2f2;
+  color: #2d2d2d;
+  border-radius: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  height: 2em;
+  width: 12.5em;
+  text-align: end;
+  font-size: 1em;
+  transform: scale(100%);
+  transition-duration: 0.2s;
+}
+.App .container .textbox:hover {
+  transform: scale(102%);
+  transition-duration: 0.25s;
+}
+.App .container .key-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "num7 num8 num9 plus" "num4 num5 num6 minus" "num1 num2 num3 mult" "num0 input result divide";
+}
+.App .container .key-container .btn {
+  width: 2.25em;
+  height: 2.25em;
+  margin: 0.25em auto;
+  font-size: 1em;
+  color: #2d2d2d;
+  border: none;
+  border-radius: 2.25em;
+  transform: scale(100%);
+  transition-duration: 0.2s;
+}
+.App .container .key-container .btn:hover {
+  transform: scale(105%);
+  transition-duration: 0.25s;
+}
+.App .container .key-container .number {
+  background-color: #cfcfcf;
+}
+.App .container .key-container .operator {
+  background-color: #0088cc;
+}
+.App .container .key-container .reset {
+  background-color: #ff932d;
+}
+.App .container .key-container .num0 {
+  grid-area: num0;
+}
+.App .container .key-container .num1 {
+  grid-area: num1;
+}
+.App .container .key-container .num2 {
+  grid-area: num2;
+}
+.App .container .key-container .num3 {
+  grid-area: num3;
+}
+.App .container .key-container .num4 {
+  grid-area: num4;
+}
+.App .container .key-container .num5 {
+  grid-area: num5;
+}
+.App .container .key-container .num6 {
+  grid-area: num6;
+}
+.App .container .key-container .num7 {
+  grid-area: num7;
+}
+.App .container .key-container .num8 {
+  grid-area: num8;
+}
+.App .container .key-container .num9 {
+  grid-area: num9;
+}
+.App .container .key-container .plus {
+  grid-area: plus;
+}
+.App .container .key-container .minus {
+  grid-area: minus;
+}
+.App .container .key-container .times {
+  grid-area: mult;
+}
+.App .container .key-container .divide {
+  grid-area: divide;
+}
+.App .container .key-container .input {
+  grid-area: input;
+}
+.App .container .key-container .result {
+  grid-area: result;
+}
+.App .signature {
+  color: #b2b2b2;
+  margin: 1em auto;
+  text-align: center;
+}/*# sourceMappingURL=App.css.map */
