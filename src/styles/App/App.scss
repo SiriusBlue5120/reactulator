@@ -22,7 +22,7 @@ $ease-in-dur: 0.2s;
 .App {
     background-color: $background-color;
     color: $text-primary-color;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 
     .header {
